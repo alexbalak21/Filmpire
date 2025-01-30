@@ -1,10 +1,9 @@
 import React from "react"
-import { CssBaseline } from "@mui/material"
-import { Routes, Route } from "react-router"
-
+import {CssBaseline} from "@mui/material"
+import {Routes, Route} from "react-router"
 import useStyles from "./styles"
 
-import { Actors, Movies, NavBar, Profile, MovieInformation } from "./components"
+import {Actors, Movies, NavBar, Profile, MovieInformation} from "./components"
 
 const App = () => {
   const classes = useStyles()
@@ -15,7 +14,7 @@ const App = () => {
       <main className={classes.content}>
         <div className={classes.toolbar} />
         <Routes>
-          <Route path="/" element={<h1>Home</h1>} />
+          <Route path="/" element={<Movies />} />
           <Route path="/movies/:id" element={<MovieInformation />} />
           <Route path="/actors/:id" element={<Actors />} />
           <Route path="/profile/:id" element={<Profile />} />
